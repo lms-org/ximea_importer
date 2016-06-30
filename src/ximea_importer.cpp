@@ -7,6 +7,7 @@
 //TODO https://www.ximea.com/support/wiki/apis/XiApi_Manual
 //Taken from the xiExample
 bool XimeaImporter::initialize() {
+    myImage = writeChannel<lms::imaging::Image>("IMAGE");
     // image buffer
         memset(&image,0,sizeof(image));
         image.size = sizeof(XI_IMG);
