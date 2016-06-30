@@ -14,4 +14,4 @@ endif()
 
 include_directories(include)
 add_library(ximea_importer MODULE ${SOURCES} ${HEADERS})
-target_link_libraries(ximea_importer PRIVATE lmscore)
+target_link_libraries(ximea_importer PRIVATE lmscore m3api)

@@ -12,7 +12,6 @@ bool XimeaImporter::initialize() {
         image.size = sizeof(XI_IMG);
 
         // Sample for XIMEA API V4.05
-        HANDLE xiH = NULL;
         XI_RETURN stat = XI_OK;
 
         // Retrieving a handle to the camera device
