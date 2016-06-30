@@ -8,6 +8,7 @@
 #include <m3api/xiApi.h> // Linux, OSX
 #endif
 #include <memory.h>
+#include <lms/imaging/image.h>
 
 /**
  * @brief LMS module ximea_importer
@@ -19,6 +20,7 @@ public:
     bool cycle() override;
 
 private:
+    lms::WriteDataChannel<lms::imaging::Image> myImage;
 
 HANDLE xiH;
 XI_RETURN stat;
