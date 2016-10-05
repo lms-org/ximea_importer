@@ -19,4 +19,4 @@ endif()
 
 include_directories(include)
 add_library(ximea_importer MODULE ${SOURCES} ${HEADERS})
-target_link_libraries(ximea_importer PRIVATE ${CONAN_LIBS})#lmscore m3api imaging)
+target_link_libraries(ximea_importer PRIVATE ${CONAN_LIBS} m3api)
