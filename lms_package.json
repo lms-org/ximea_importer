@@ -1,5 +1,0 @@
-{
-"name": "ximea_importer",
-"dependencies":["imaging","lms"],
-"description":"Gets the image from a ximea camera"
-}

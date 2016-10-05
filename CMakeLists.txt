@@ -1,3 +1,8 @@
+cmake_minimum_required(VERSION 2.8.12)
+
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
 set(SOURCES
     "src/ximea_importer.cpp"
     "src/interface.cpp"
@@ -14,4 +19,4 @@ endif()
 
 include_directories(include)
 add_library(ximea_importer MODULE ${SOURCES} ${HEADERS})
-target_link_libraries(ximea_importer PRIVATE lmscore m3api imaging)
+target_link_libraries(ximea_importer PRIVATE ${CONAN_LIBS})#lmscore m3api imaging)
