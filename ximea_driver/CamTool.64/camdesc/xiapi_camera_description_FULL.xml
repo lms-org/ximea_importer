@@ -1,0 +1,1902 @@
+<?xml version="1.0"?>
+<RegisterDescription>
+	<Group Comment="Basic">
+		<Integer>
+			<DisplayName>Exposure</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<Representation>Logarithmic</Representation>
+			<pValue>exposureReg</pValue>
+			<pMin>exposureMinReg</pMin>
+			<pMax>exposureMaxReg</pMax>
+			<pInc>exposureIncReg</pInc>
+		</Integer>
+		<Float>
+			<DisplayName>Gain</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>gainReg</pValue>
+			<pMin>gainMinReg</pMin>
+			<pMax>gainMaxReg</pMax>
+		</Float>
+		<Enumeration>
+			<DisplayName>Downsampling</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>downsamplingReg</pValue>
+			<EnumEntry>
+				<DisplayName>1</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>2</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>3</DisplayName>
+				<Value>3</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>4</DisplayName>
+				<Value>4</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>5</DisplayName>
+				<Value>5</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>6</DisplayName>
+				<Value>6</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>7</DisplayName>
+				<Value>7</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>8</DisplayName>
+				<Value>8</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>Downs. type</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>downsampling_typeReg</pValue>
+			<EnumEntry>
+				<DisplayName>Binning</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Skipping</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>Data format</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>imgdataformatReg</pValue>
+			<EnumEntry>
+				<DisplayName>Mono8</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Mono16</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>RGB24</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>RGB32</DisplayName>
+				<Value>3</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>RAW8</DisplayName>
+				<Value>5</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>RAW16</DisplayName>
+				<Value>6</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>TRANSPORT</DisplayName>
+				<Value>7</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>Shutter type</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>shutter_typeReg</pValue>
+			<EnumEntry>
+				<DisplayName>Global</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Electronic rolling</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Global reset release</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>Sensor taps</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>sensor_tapsReg</pValue>
+			<EnumEntry>
+				<DisplayName>1</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>2</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>4</DisplayName>
+				<Value>4</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Boolean>
+			<DisplayName>AEAG</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>aeagReg</pValue>
+			<AppDefault>1</AppDefault>
+		</Boolean>
+		<Integer>
+			<DisplayName>AEAG-ROI.X</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>aeag_roi_offset_xReg</pValue>
+			<pMin>aeag_roi_offset_xMinReg</pMin>
+			<pMax>aeag_roi_offset_xMaxReg</pMax>
+			<pInc>aeag_roi_offset_xIncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>AEAG-ROI.Y</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>aeag_roi_offset_yReg</pValue>
+			<pMin>aeag_roi_offset_yMinReg</pMin>
+			<pMax>aeag_roi_offset_yMaxReg</pMax>
+			<pInc>aeag_roi_offset_yIncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>AEAG-ROI.W</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>aeag_roi_widthReg</pValue>
+			<pMin>aeag_roi_widthMinReg</pMin>
+			<pMax>aeag_roi_widthMaxReg</pMax>
+			<pInc>aeag_roi_widthIncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>AEAG-ROI.H</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>aeag_roi_heightReg</pValue>
+			<pMin>aeag_roi_heightMinReg</pMin>
+			<pMax>aeag_roi_heightMaxReg</pMax>
+			<pInc>aeag_roi_heightIncReg</pInc>
+		</Integer>
+		<Boolean>
+			<DisplayName>Sensor defects correction</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pValue>bpcReg</pValue>
+			<AppDefault>1</AppDefault>
+		</Boolean>
+		<Boolean>
+			<DisplayName>Column FPN correction</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>column_fpn_correctionReg</pValue>
+			<AppDefault>1</AppDefault>
+		</Boolean>
+		<Boolean>
+			<DisplayName>Row FPN correction</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>row_fpn_correctionReg</pValue>
+			<AppDefault>1</AppDefault>
+		</Boolean>
+		<Boolean>
+			<DisplayName>AWB</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>auto_wbReg</pValue>
+		</Boolean>
+		<Command>
+			<DisplayName>Manual WB</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>manual_wbReg</pValue>
+		</Command>
+		<Float>
+			<DisplayName>WB.R</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pValue>wb_krReg</pValue>
+			<pMin>wb_krMinReg</pMin>
+			<pMax>wb_krMaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>WB.G</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pValue>wb_kgReg</pValue>
+			<pMin>wb_kgMinReg</pMin>
+			<pMax>wb_kgMaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>WB.B</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pValue>wb_kbReg</pValue>
+			<pMin>wb_kbMinReg</pMin>
+			<pMax>wb_kbMaxReg</pMax>
+		</Float>
+		<Integer>
+			<DisplayName>ROI Offset X</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>offsetXReg</pValue>
+			<pMin>offsetXMinReg</pMin>
+			<pMax>offsetXMaxReg</pMax>
+			<pInc>offsetXIncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>ROI Offset Y</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>offsetYReg</pValue>
+			<pMin>offsetYMinReg</pMin>
+			<pMax>offsetYMaxReg</pMax>
+			<pInc>offsetYIncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>ROI Width</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>widthReg</pValue>
+			<pMin>widthMinReg</pMin>
+			<pMax>widthMaxReg</pMax>
+			<pInc>widthIncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>ROI Height</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>heightReg</pValue>
+			<pMin>heightMinReg</pMin>
+			<pMax>heightMaxReg</pMax>
+			<pInc>heightIncReg</pInc>
+		</Integer>
+		<Boolean>
+			<DisplayName>HDR</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pValue>hdrReg</pValue>
+		</Boolean>
+	</Group>
+	<Group Comment="AE Setup">
+		<Float>
+			<DisplayName>AEAGExpPriority</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>exp_priorityReg</pValue>
+			<pMin>exp_priorityMinReg</pMin>
+			<pMax>exp_priorityMaxReg</pMax>
+		</Float>
+		<Integer>
+			<DisplayName>AETopLimit</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<Representation>Logarithmic</Representation>
+			<pValue>ae_max_limitReg</pValue>
+			<pMin>ae_max_limitMinReg</pMin>
+			<pMax>ae_max_limitMaxReg</pMax>
+			<pInc>ae_max_limitIncReg</pInc>
+		</Integer>
+		<Float>
+			<DisplayName>AGTopLimit</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>ag_max_limitReg</pValue>
+			<pMin>ag_max_limitMinReg</pMin>
+			<pMax>ag_max_limitMaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>AEAGTargetLevel</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>aeag_levelReg</pValue>
+			<pMin>aeag_levelMinReg</pMin>
+			<pMax>aeag_levelMaxReg</pMax>
+		</Float>
+	</Group>
+	<Group Comment="Performance">
+		<Integer>
+			<DisplayName>Limit bandwidth</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>limit_bandwidthReg</pValue>
+			<pMin>limit_bandwidthMinReg</pMin>
+			<pMax>limit_bandwidthMaxReg</pMax>
+			<pInc>limit_bandwidthIncReg</pInc>
+		</Integer>
+		<Enumeration>
+			<DisplayName>Sensor bit depth</DisplayName>
+			<Visibility>Expert</Visibility>
+			<EnumEntry>
+				<DisplayName>8 Bpp</DisplayName>
+				<Value>8</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>10 Bpp</DisplayName>
+				<Value>10</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>12 Bpp</DisplayName>
+				<Value>12</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>14 Bpp</DisplayName>
+				<Value>14</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>16 Bpp</DisplayName>
+				<Value>16</Value>
+			</EnumEntry>
+			<pValue>sensor_bit_depthReg</pValue>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>Device output bit depth</DisplayName>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<Visibility>Expert</Visibility>
+			<EnumEntry>
+				<DisplayName>8 Bpp</DisplayName>
+				<Value>8</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>9 Bpp</DisplayName>
+				<Value>9</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>10 Bpp</DisplayName>
+				<Value>10</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>11 Bpp</DisplayName>
+				<Value>11</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>12 Bpp</DisplayName>
+				<Value>12</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>14 Bpp</DisplayName>
+				<Value>14</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>16 Bpp</DisplayName>
+				<Value>16</Value>
+			</EnumEntry>
+			<pValue>output_bit_depthReg</pValue>
+		</Enumeration>
+		<Boolean>
+			<DisplayName>Device output data packing</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>output_bit_packingReg</pValue>
+		</Boolean>
+		<Enumeration>
+			<DisplayName>Device output data packing mode</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>output_bit_packing_typeReg</pValue>
+			<EnumEntry>
+				<DisplayName>XI Group</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>SFNC Pack</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>Image bit depth</DisplayName>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<Visibility>Expert</Visibility>
+			<EnumEntry>
+				<DisplayName>8 Bpp</DisplayName>
+				<Value>8</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>10 Bpp</DisplayName>
+				<Value>10</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>12 Bpp</DisplayName>
+				<Value>12</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>14 Bpp</DisplayName>
+				<Value>14</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>16 Bpp</DisplayName>
+				<Value>16</Value>
+			</EnumEntry>
+			<pValue>image_data_bit_depthReg</pValue>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>Timing mode</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>acq_timing_modeReg</pValue>
+			<EnumEntry>
+				<DisplayName>Free Run</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Frame Rate</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Float>
+			<DisplayName>Frame Rate</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>framerateReg</pValue>
+			<pMin>framerateMinReg</pMin>
+			<pMax>framerateMaxReg</pMax>
+		</Float>
+	</Group>
+	<Group Comment="Temperature">
+		<Enumeration>
+			<DisplayName>Is Cooled</DisplayName>
+			<ImposedAccessMode>RO</ImposedAccessMode>
+			<Visibility>Beginner</Visibility>
+			<pValue>iscooledReg</pValue>
+			<EnumEntry>
+				<DisplayName>XI Group</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>SFNC Pack</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>Cooling</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>coolingReg</pValue>
+			<EnumEntry>
+				<DisplayName>XI Group</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>SFNC Pack</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Float>
+			<DisplayName>Target</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>target_tempReg</pValue>
+			<pMin>target_tempMinReg</pMin>
+			<pMax>target_tempMaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>TempSensor</DisplayName>
+			<ImposedAccessMode>RO</ImposedAccessMode>
+			<Visibility>Beginner</Visibility>
+			<pValue>chip_tempReg</pValue>
+		</Float>
+		<Float>
+			<DisplayName>TempHousing</DisplayName>
+			<ImposedAccessMode>RO</ImposedAccessMode>
+			<Visibility>Beginner</Visibility>
+			<pValue>hous_tempReg</pValue>
+		</Float>
+		<Float>
+			<DisplayName>TempHousingBackSide</DisplayName>
+			<ImposedAccessMode>RO</ImposedAccessMode>
+			<Visibility>Beginner</Visibility>
+			<pValue>hous_back_side_tempReg</pValue>
+		</Float>
+		<Float>
+			<DisplayName>TempSensorBoard</DisplayName>
+			<ImposedAccessMode>RO</ImposedAccessMode>
+			<Visibility>Beginner</Visibility>
+			<pValue>sensor_board_tempReg</pValue>
+		</Float>
+	</Group>
+	<Group Comment="Color Correction">
+		<Float>
+			<DisplayName>Gamma Y</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pValue>gammaYReg</pValue>
+			<pMin>gammaYMinReg</pMin>
+			<pMax>gammaYMaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>Gamma C</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pValue>gammaCReg</pValue>
+			<pMin>gammaCMinReg</pMin>
+			<pMax>gammaCMaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>Sharpness</DisplayName>
+			<Visibility>Expert</Visibility>
+			<pValue>sharpnessReg</pValue>
+			<pMin>sharpnessMinReg</pMin>
+			<pMax>sharpnessMaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc00</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX00Reg</pValue>
+			<pMin>ccMTX00MinReg</pMin>
+			<pMax>ccMTX00MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc01</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX01Reg</pValue>
+			<pMin>ccMTX01MinReg</pMin>
+			<pMax>ccMTX01MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc02</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX02Reg</pValue>
+			<pMin>ccMTX02MinReg</pMin>
+			<pMax>ccMTX02MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc03</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX03Reg</pValue>
+			<pMin>ccMTX03MinReg</pMin>
+			<pMax>ccMTX03MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc10</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX10Reg</pValue>
+			<pMin>ccMTX10MinReg</pMin>
+			<pMax>ccMTX10MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc11</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX11Reg</pValue>
+			<pMin>ccMTX11MinReg</pMin>
+			<pMax>ccMTX11MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc12</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX12Reg</pValue>
+			<pMin>ccMTX12MinReg</pMin>
+			<pMax>ccMTX12MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc13</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX13Reg</pValue>
+			<pMin>ccMTX13MinReg</pMin>
+			<pMax>ccMTX13MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc20</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX20Reg</pValue>
+			<pMin>ccMTX20MinReg</pMin>
+			<pMax>ccMTX20MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc21</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX21Reg</pValue>
+			<pMin>ccMTX21MinReg</pMin>
+			<pMax>ccMTX21MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc22</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX22Reg</pValue>
+			<pMin>ccMTX22MinReg</pMin>
+			<pMax>ccMTX22MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc23</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX23Reg</pValue>
+			<pMin>ccMTX23MinReg</pMin>
+			<pMax>ccMTX23MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc30</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX30Reg</pValue>
+			<pMin>ccMTX30MinReg</pMin>
+			<pMax>ccMTX30MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc31</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX31Reg</pValue>
+			<pMin>ccMTX31MinReg</pMin>
+			<pMax>ccMTX31MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc32</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX32Reg</pValue>
+			<pMin>ccMTX32MinReg</pMin>
+			<pMax>ccMTX32MaxReg</pMax>
+		</Float>
+		<Float>
+			<DisplayName>cc33</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>ccMTX33Reg</pValue>
+			<pMin>ccMTX33MinReg</pMin>
+			<pMax>ccMTX33MaxReg</pMax>
+		</Float>
+		<Command>
+			<DisplayName>Default CC Matrix</DisplayName>
+			<Visibility>Guru</Visibility>
+			<pValue>defccMTXReg</pValue>
+		</Command>
+	</Group>
+	<Group Comment="Device IO">
+		<Enumeration>
+			<DisplayName>Trigger mode</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pIsLocked>TLParamsLocked</pIsLocked>
+			<pValue>trigger_sourceReg</pValue>
+			<EnumEntry>
+				<DisplayName>Off</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Rising edge</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Falling edge</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Software</DisplayName>
+				<Value>3</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Command>
+			<DisplayName>SW Trigger</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>trigger_softwareReg</pValue>
+		</Command>
+		<Enumeration>
+			<DisplayName>Trigger what</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>trigger_selectorReg</pValue>
+			<EnumEntry>
+				<DisplayName>Frame start</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Exposure active</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Frame burst start</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Frame burst active</DisplayName>
+				<Value>3</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Integer>
+			<DisplayName>Frame burst count</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>acq_frame_burst_countReg</pValue>
+			<pMin>acq_frame_burst_countMinReg</pMin>
+			<pMax>acq_frame_burst_countMaxReg</pMax>
+			<pInc>acq_frame_burst_countIncReg</pInc>
+		</Integer>
+	</Group>
+	<Group Comment="GPIO Setup">
+		<Enumeration>
+			<DisplayName>GPISelector</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<EnumEntry>
+				<DisplayName>GPI 1</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>GPI 2</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>GPI 3</DisplayName>
+				<Value>3</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>GPI 4</DisplayName>
+				<Value>4</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>GPI 5</DisplayName>
+				<Value>5</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>GPI 6</DisplayName>
+				<Value>6</Value>
+			</EnumEntry>
+			<pValue>gpi_selectorReg</pValue>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>GPI mode</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>gpi_modeReg</pValue>
+			<EnumEntry>
+				<DisplayName>Off</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Trigger</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>GPOSelector</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<EnumEntry>
+				<DisplayName>GPO 1</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>GPO 2</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>GPO 3</DisplayName>
+				<Value>3</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>GPO 4</DisplayName>
+				<Value>4</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>GPO 5</DisplayName>
+				<Value>5</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>GPO 6</DisplayName>
+				<Value>6</Value>
+			</EnumEntry>
+			<pValue>gpo_selectorReg</pValue>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>GPO mode</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>gpo_modeReg</pValue>
+			<EnumEntry>
+				<DisplayName>Off</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>On</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Frame active</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Frame active (neg.)</DisplayName>
+				<Value>3</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Exposure active</DisplayName>
+				<Value>4</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Exposure active (neg.)</DisplayName>
+				<Value>5</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Frame trigger wait</DisplayName>
+				<Value>6</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Frame trigger wait (neg.)</DisplayName>
+				<Value>7</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Exposure pulse</DisplayName>
+				<Value>8</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Exposure pulse (neg.)</DisplayName>
+				<Value>9</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Busy</DisplayName>
+				<Value>10</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Busy (neg.)</DisplayName>
+				<Value>11</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>LEDSelector</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<EnumEntry>
+				<DisplayName>LED 1</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>LED 2</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>LED 3</DisplayName>
+				<Value>3</Value>
+			</EnumEntry>
+			<pValue>led_selectorReg</pValue>
+		</Enumeration>
+		<Enumeration>
+			<DisplayName>LED mode</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>led_modeReg</pValue>
+			<EnumEntry>
+				<DisplayName>Blinking (1 Hz) if everything OK</DisplayName>
+				<Value>0</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>On if trigger detected</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>On if external signal detected</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>On if link is OK</DisplayName>
+				<Value>3</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>On if data is streaming</DisplayName>
+				<Value>4</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>On if sensor is integrating</DisplayName>
+				<Value>5</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>On if frame active (exposure, readout)</DisplayName>
+				<Value>6</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Off</DisplayName>
+				<Value>7</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>On</DisplayName>
+				<Value>8</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Blinking (1 Hz)</DisplayName>
+				<Value>9</Value>
+			</EnumEntry>
+		</Enumeration>
+		<Boolean>
+			<DisplayName>Debounce</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>dbnc_enReg</pValue>
+		</Boolean>
+	</Group>
+	<Group Comment="Debounce Setup">
+		<Integer>
+			<DisplayName>GPI level</DisplayName>
+			<ImposedAccessMode>RO</ImposedAccessMode>
+			<Visibility>Beginner</Visibility>
+			<pValue>gpi_levelReg</pValue>
+		</Integer>
+		<Integer>
+			<DisplayName>Debounce t0</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>dbnc_t0Reg</pValue>
+			<pMin>dbnc_t0MinReg</pMin>
+			<pMax>dbnc_t0MaxReg</pMax>
+			<pInc>dbnc_t0IncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>Debounce t1</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>dbnc_t1Reg</pValue>
+			<pMin>dbnc_t1MinReg</pMin>
+			<pMax>dbnc_t1MaxReg</pMax>
+			<pInc>dbnc_t1IncReg</pInc>
+		</Integer>
+		<Boolean>
+			<DisplayName>Debounce pol</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>dbnc_polReg</pValue>
+		</Boolean>
+	</Group>
+	<Group Comment="HDR Setup">
+		<Integer>
+			<DisplayName>HDR kneepoints</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>hdr_kneepoint_countReg</pValue>
+			<pMin>hdr_kneepoint_countMinReg</pMin>
+			<pMax>hdr_kneepoint_countMaxReg</pMax>
+			<pInc>hdr_kneepoint_countIncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>HDR t1</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>hdr_t1Reg</pValue>
+			<pMin>hdr_t1MinReg</pMin>
+			<pMax>hdr_t1MaxReg</pMax>
+			<pInc>hdr_t1IncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>HDR t2</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>hdr_t2Reg</pValue>
+			<pMin>hdr_t2MinReg</pMin>
+			<pMax>hdr_t2MaxReg</pMax>
+			<pInc>hdr_t2IncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>HDR kneepoint1</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>hdr_kneepoint1Reg</pValue>
+			<pMin>hdr_kneepoint1MinReg</pMin>
+			<pMax>hdr_kneepoint1MaxReg</pMax>
+			<pInc>hdr_kneepoint1IncReg</pInc>
+		</Integer>
+		<Integer>
+			<DisplayName>HDR kneepoint2</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>hdr_kneepoint2Reg</pValue>
+			<pMin>hdr_kneepoint2MinReg</pMin>
+			<pMax>hdr_kneepoint2MaxReg</pMax>
+			<pInc>hdr_kneepoint2IncReg</pInc>
+		</Integer>
+	</Group>
+	<Group Comment="Lens Control">
+		<Boolean>
+			<DisplayName>Enable</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>lens_modeReg</pValue>
+		</Boolean>
+		<Float>
+			<DisplayName>Aperture</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pMax>LensApertureValueMaxReg</pMax>
+			<pMin>LensApertureValueMinReg</pMin>
+			<pValue>LensApertureValueReg</pValue>
+			<ImposedAccessMode>RW</ImposedAccessMode>
+		</Float>
+		<Integer>
+			<DisplayName>Focus movement value</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pMax>LensFocusMovementValueMaxReg</pMax>
+			<pMin>LensFocusMovementValueMinReg</pMin>
+			<pValue>LensFocusMovementValueReg</pValue>
+			<ImposedAccessMode>RW</ImposedAccessMode>
+		</Integer>
+		<Command>
+			<DisplayName>Lens focus move</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pValue>LensFocusMoveReg</pValue>
+			<ImposedAccessMode>RW</ImposedAccessMode>
+		</Command>
+		<Float>
+			<DisplayName>Focus distance</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pMax>LensFocusDistanceMaxReg</pMax>
+			<pMin>LensFocusDistanceMinReg</pMin>
+			<pValue>LensFocusDistanceReg</pValue>
+			<ImposedAccessMode>RW</ImposedAccessMode>
+		</Float>
+		<Float>
+			<DisplayName>Focal length</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pMax>LensFocalLengthMaxReg</pMax>
+			<pMin>LensFocalLengthMinReg</pMin>
+			<pValue>LensFocalLengthReg</pValue>
+			<ImposedAccessMode>RO</ImposedAccessMode>
+		</Float>
+		<Enumeration>
+			<DisplayName>Lens feature selector</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<EnumEntry>
+				<DisplayName>Image stabilization enabled</DisplayName>
+				<Value>4</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Image stab. switch status</DisplayName>
+				<Value>5</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Image zoom supported</DisplayName>
+				<Value>6</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Motorized focus bounded</DisplayName>
+				<Value>2</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Motorized focus calibration</DisplayName>
+				<Value>3</Value>
+			</EnumEntry>
+			<EnumEntry>
+				<DisplayName>Motorized focus switch</DisplayName>
+				<Value>1</Value>
+			</EnumEntry>
+			<pValue>LensFeatureSelectorReg</pValue>
+		</Enumeration>
+		<Float>
+			<DisplayName>Lens feature</DisplayName>
+			<Visibility>Beginner</Visibility>
+			<pMax>LensFeatureMaxReg</pMax>
+			<pMin>LensFeatureMinReg</pMin>
+			<pValue>LensFeatureReg</pValue>
+			<ImposedAccessMode>RW</ImposedAccessMode>
+		</Float>
+	</Group>
+	<Group Comment="Registers">
+		<IntReg Name="exposureReg">
+			<xiApiPar>exposure</xiApiPar>
+		</IntReg>
+		<IntReg Name="exposureMinReg">
+			<xiApiPar>exposure:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="exposureMaxReg">
+			<xiApiPar>exposure:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="exposureIncReg">
+			<xiApiPar>exposure:inc</xiApiPar>
+		</IntReg>
+		<FloatReg Name="gainReg">
+			<xiApiPar>gain</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="gainMinReg">
+			<xiApiPar>gain:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="gainMaxReg">
+			<xiApiPar>gain:max</xiApiPar>
+		</FloatReg>
+		<IntReg Name="downsamplingReg">
+			<xiApiPar>downsampling</xiApiPar>
+		</IntReg>
+		<IntReg Name="downsampling_typeReg">
+			<xiApiPar>downsampling_type</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>sensor_tapsReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="imgdataformatReg">
+			<xiApiPar>imgdataformat</xiApiPar>
+		</IntReg>
+		<IntReg Name="shutter_typeReg">
+			<xiApiPar>shutter_type</xiApiPar>
+		</IntReg>
+		<IntReg Name="sensor_tapsReg">
+			<xiApiPar>sensor_taps</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+		</IntReg>
+		<BooleanReg Name="aeagReg">
+			<xiApiPar>aeag</xiApiPar>
+		</BooleanReg>
+		<FloatReg Name="exp_priorityReg">
+			<xiApiPar>exp_priority</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="exp_priorityMinReg">
+			<xiApiPar>exp_priority:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="exp_priorityMaxReg">
+			<xiApiPar>exp_priority:max</xiApiPar>
+		</FloatReg>
+		<IntReg Name="ae_max_limitReg">
+			<xiApiPar>ae_max_limit</xiApiPar>
+		</IntReg>
+		<IntReg Name="ae_max_limitMinReg">
+			<xiApiPar>ae_max_limit:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="ae_max_limitMaxReg">
+			<xiApiPar>ae_max_limit:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="ae_max_limitIncReg">
+			<xiApiPar>ae_max_limit:inc</xiApiPar>
+		</IntReg>
+		<FloatReg Name="ag_max_limitReg">
+			<xiApiPar>ag_max_limit</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ag_max_limitMinReg">
+			<xiApiPar>ag_max_limit:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ag_max_limitMaxReg">
+			<xiApiPar>ag_max_limit:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="aeag_levelReg">
+			<xiApiPar>aeag_level</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="aeag_levelMinReg">
+			<xiApiPar>aeag_level:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="aeag_levelMaxReg">
+			<xiApiPar>aeag_level:max</xiApiPar>
+		</FloatReg>
+		<IntReg Name="aeag_roi_offset_xReg">
+			<xiApiPar>aeag_roi_offset_x</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_offset_xMinReg">
+			<xiApiPar>aeag_roi_offset_x:min</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_offset_xMaxReg">
+			<xiApiPar>aeag_roi_offset_x:max</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+			<pInvalidator>aeag_roi_widthReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_offset_xIncReg">
+			<xiApiPar>aeag_roi_offset_x:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="aeag_roi_offset_yReg">
+			<xiApiPar>aeag_roi_offset_y</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_offset_yMinReg">
+			<xiApiPar>aeag_roi_offset_y:min</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_offset_yMaxReg">
+			<xiApiPar>aeag_roi_offset_y:max</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+			<pInvalidator>aeag_roi_heightReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_offset_yIncReg">
+			<xiApiPar>aeag_roi_offset_y:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="aeag_roi_widthReg">
+			<xiApiPar>aeag_roi_width</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_widthMinReg">
+			<xiApiPar>aeag_roi_width:min</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_widthMaxReg">
+			<xiApiPar>aeag_roi_width:max</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+			<pInvalidator>aeag_roi_widthReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_widthIncReg">
+			<xiApiPar>aeag_roi_width:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="aeag_roi_heightReg">
+			<xiApiPar>aeag_roi_height</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_heightMinReg">
+			<xiApiPar>aeag_roi_height:min</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_heightMaxReg">
+			<xiApiPar>aeag_roi_height:max</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+			<pInvalidator>aeag_roi_offset_yReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="aeag_roi_heightIncReg">
+			<xiApiPar>aeag_roi_height:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="acq_timing_modeReg">
+			<xiApiPar>acq_timing_mode</xiApiPar>
+		</IntReg>
+		<FloatReg Name="framerateReg">
+			<xiApiPar>framerate</xiApiPar>
+			<pInvalidator>acq_timing_modeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>exposureReg</pInvalidator>
+			<pInvalidator>limit_bandwidthReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="framerateMinReg">
+			<xiApiPar>framerate:min</xiApiPar>
+			<pInvalidator>acq_timing_modeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>exposureReg</pInvalidator>
+			<pInvalidator>limit_bandwidthReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="framerateMaxReg">
+			<xiApiPar>framerate:max</xiApiPar>
+			<pInvalidator>acq_timing_modeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>exposureReg</pInvalidator>
+			<pInvalidator>limit_bandwidthReg</pInvalidator>
+		</FloatReg>
+		<IntReg Name="limit_bandwidthReg">
+			<xiApiPar>limit_bandwidth</xiApiPar>
+			<pInvalidatorReSet>output_bit_depthReg</pInvalidatorReSet>
+			<pInvalidatorReSet>output_bit_packingReg</pInvalidatorReSet>
+			<pInvalidatorReSet>downsamplingReg</pInvalidatorReSet>
+			<pInvalidatorReSet>downsampling_typeReg</pInvalidatorReSet>
+		</IntReg>
+		<IntReg Name="limit_bandwidthMinReg">
+			<xiApiPar>limit_bandwidth:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="limit_bandwidthMaxReg">
+			<xiApiPar>limit_bandwidth:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="limit_bandwidthIncReg">
+			<xiApiPar>limit_bandwidth:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="sensor_clock_freq_indexReg">
+			<xiApiPar>sensor_clock_freq_index</xiApiPar>
+		</IntReg>
+		<IntReg Name="sensor_clock_freq_hzReg">
+			<xiApiPar>sensor_clock_freq_hz</xiApiPar>
+			<pInvalidator>sensor_clock_freq_indexReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="sensor_bit_depthReg">
+			<xiApiPar>sensor_bit_depth</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="sensor_bit_depthMinReg">
+			<xiApiPar>sensor_bit_depth:min</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="sensor_bit_depthMaxReg">
+			<xiApiPar>sensor_bit_depth:max</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="sensor_bit_depthIncReg">
+			<xiApiPar>sensor_bit_depth:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="output_bit_depthReg">
+			<xiApiPar>output_bit_depth</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="output_bit_depthMinReg">
+			<xiApiPar>output_bit_depth:min</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="output_bit_depthMaxReg">
+			<xiApiPar>output_bit_depth:max</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="output_bit_depthIncReg">
+			<xiApiPar>output_bit_depth:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="image_data_bit_depthReg">
+			<xiApiPar>image_data_bit_depth</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>output_bit_depthReg</pInvalidator>
+			<pInvalidator>sensor_bit_depthReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="image_data_bit_depthMinReg">
+			<xiApiPar>image_data_bit_depth:min</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>output_bit_depthReg</pInvalidator>
+			<pInvalidator>sensor_bit_depthReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="image_data_bit_depthMaxReg">
+			<xiApiPar>image_data_bit_depth:max</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>output_bit_depthReg</pInvalidator>
+			<pInvalidator>sensor_bit_depthReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="image_data_bit_depthIncReg">
+			<xiApiPar>image_data_bit_depth:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="output_bit_packing_typeReg">
+			<xiApiPar>output_bit_packing_type</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>output_bit_depthReg</pInvalidator>
+			<pInvalidator>sensor_bit_depthReg</pInvalidator>
+		</IntReg>
+		<BooleanReg Name="output_bit_packingReg">
+			<xiApiPar>output_bit_packing</xiApiPar>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>output_bit_depthReg</pInvalidator>
+			<pInvalidator>sensor_bit_depthReg</pInvalidator>
+		</BooleanReg>
+		<BooleanReg Name="bpcReg">
+			<xiApiPar>bpc</xiApiPar>
+		</BooleanReg>
+		<BooleanReg Name="column_fpn_correctionReg">
+			<xiApiPar>column_fpn_correction</xiApiPar>
+		</BooleanReg>
+		<BooleanReg Name="row_fpn_correctionReg">
+			<xiApiPar>row_fpn_correction</xiApiPar>
+		</BooleanReg>
+		<BooleanReg Name="auto_wbReg">
+			<xiApiPar>auto_wb</xiApiPar>
+		</BooleanReg>
+		<IntReg Name="manual_wbReg">
+			<xiApiPar>manual_wb</xiApiPar>
+		</IntReg>
+		<FloatReg Name="wb_krReg">
+			<xiApiPar>wb_kr</xiApiPar>
+			<pInvalidator>manual_wbReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="wb_krMinReg">
+			<xiApiPar>wb_kr:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="wb_krMaxReg">
+			<xiApiPar>wb_kr:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="wb_kgReg">
+			<xiApiPar>wb_kg</xiApiPar>
+			<pInvalidator>manual_wbReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="wb_kgMinReg">
+			<xiApiPar>wb_kg:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="wb_kgMaxReg">
+			<xiApiPar>wb_kg:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="wb_kbReg">
+			<xiApiPar>wb_kb</xiApiPar>
+			<pInvalidator>manual_wbReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="wb_kbMinReg">
+			<xiApiPar>wb_kb:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="wb_kbMaxReg">
+			<xiApiPar>wb_kb:max</xiApiPar>
+		</FloatReg>
+		<BooleanReg Name="iscooledReg">
+			<xiApiPar>iscooled</xiApiPar>
+		</BooleanReg>
+		<BooleanReg Name="coolingReg">
+			<xiApiPar>cooling</xiApiPar>
+		</BooleanReg>
+		<FloatReg Name="target_tempReg">
+			<xiApiPar>target_temp</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="target_tempMinReg">
+			<xiApiPar>target_temp:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="target_tempMaxReg">
+			<xiApiPar>target_temp:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="chip_tempReg">
+			<xiApiPar>chip_temp</xiApiPar>
+			<PollingTime>1000</PollingTime>
+		</FloatReg>
+		<FloatReg Name="hous_tempReg">
+			<xiApiPar>hous_temp</xiApiPar>
+			<PollingTime>1000</PollingTime>
+		</FloatReg>
+		<FloatReg Name="hous_back_side_tempReg">
+			<xiApiPar>hous_back_side_temp</xiApiPar>
+			<PollingTime>1000</PollingTime>
+		</FloatReg>
+		<FloatReg Name="sensor_board_tempReg">
+			<xiApiPar>sensor_board_temp</xiApiPar>
+			<PollingTime>1000</PollingTime>
+		</FloatReg>
+		<FloatReg Name="gammaYReg">
+			<xiApiPar>gammaY</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="gammaYMinReg">
+			<xiApiPar>gammaY:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="gammaYMaxReg">
+			<xiApiPar>gammaY:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="gammaCReg">
+			<xiApiPar>gammaC</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="gammaCMinReg">
+			<xiApiPar>gammaC:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="gammaCMaxReg">
+			<xiApiPar>gammaC:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="sharpnessReg">
+			<xiApiPar>sharpness</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="sharpnessMinReg">
+			<xiApiPar>sharpness:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="sharpnessMaxReg">
+			<xiApiPar>sharpness:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX00Reg">
+			<xiApiPar>ccMTX00</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX00MinReg">
+			<xiApiPar>ccMTX00:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX00MaxReg">
+			<xiApiPar>ccMTX00:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX01Reg">
+			<xiApiPar>ccMTX01</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX01MinReg">
+			<xiApiPar>ccMTX01:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX01MaxReg">
+			<xiApiPar>ccMTX01:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX02Reg">
+			<xiApiPar>ccMTX02</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX02MinReg">
+			<xiApiPar>ccMTX02:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX02MaxReg">
+			<xiApiPar>ccMTX02:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX03Reg">
+			<xiApiPar>ccMTX03</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX03MinReg">
+			<xiApiPar>ccMTX03:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX03MaxReg">
+			<xiApiPar>ccMTX03:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX10Reg">
+			<xiApiPar>ccMTX10</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX10MinReg">
+			<xiApiPar>ccMTX10:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX10MaxReg">
+			<xiApiPar>ccMTX10:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX11Reg">
+			<xiApiPar>ccMTX11</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX11MinReg">
+			<xiApiPar>ccMTX11:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX11MaxReg">
+			<xiApiPar>ccMTX11:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX12Reg">
+			<xiApiPar>ccMTX12</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX12MinReg">
+			<xiApiPar>ccMTX12:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX12MaxReg">
+			<xiApiPar>ccMTX12:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX13Reg">
+			<xiApiPar>ccMTX13</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX13MinReg">
+			<xiApiPar>ccMTX13:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX13MaxReg">
+			<xiApiPar>ccMTX13:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX20Reg">
+			<xiApiPar>ccMTX20</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX20MinReg">
+			<xiApiPar>ccMTX20:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX20MaxReg">
+			<xiApiPar>ccMTX20:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX21Reg">
+			<xiApiPar>ccMTX21</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX21MinReg">
+			<xiApiPar>ccMTX21:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX21MaxReg">
+			<xiApiPar>ccMTX21:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX22Reg">
+			<xiApiPar>ccMTX22</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX22MinReg">
+			<xiApiPar>ccMTX22:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX22MaxReg">
+			<xiApiPar>ccMTX22:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX23Reg">
+			<xiApiPar>ccMTX23</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX23MinReg">
+			<xiApiPar>ccMTX23:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX23MaxReg">
+			<xiApiPar>ccMTX23:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX30Reg">
+			<xiApiPar>ccMTX30</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX30MinReg">
+			<xiApiPar>ccMTX30:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX30MaxReg">
+			<xiApiPar>ccMTX30:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX31Reg">
+			<xiApiPar>ccMTX31</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX31MinReg">
+			<xiApiPar>ccMTX31:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX31MaxReg">
+			<xiApiPar>ccMTX31:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX32Reg">
+			<xiApiPar>ccMTX32</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX32MinReg">
+			<xiApiPar>ccMTX32:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX32MaxReg">
+			<xiApiPar>ccMTX32:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX33Reg">
+			<xiApiPar>ccMTX33</xiApiPar>
+			<pInvalidator>defccMTXReg</pInvalidator>
+		</FloatReg>
+		<FloatReg Name="ccMTX33MinReg">
+			<xiApiPar>ccMTX33:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="ccMTX33MaxReg">
+			<xiApiPar>ccMTX33:max</xiApiPar>
+		</FloatReg>
+		<IntReg Name="defccMTXReg">
+			<xiApiPar>defccMTX</xiApiPar>
+		</IntReg>
+		<IntReg Name="offsetXReg">
+			<xiApiPar>offsetX</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="offsetXMinReg">
+			<xiApiPar>offsetX:min</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="offsetXMaxReg">
+			<xiApiPar>offsetX:max</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>widthReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="offsetXIncReg">
+			<xiApiPar>offsetX:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="offsetYReg">
+			<xiApiPar>offsetY</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="offsetYMinReg">
+			<xiApiPar>offsetY:min</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="offsetYMaxReg">
+			<xiApiPar>offsetY:max</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>heightReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="offsetYIncReg">
+			<xiApiPar>offsetY:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="widthReg">
+			<xiApiPar>width</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="widthMinReg">
+			<xiApiPar>width:min</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="widthMaxReg">
+			<xiApiPar>width:max</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>offsetXReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="widthIncReg">
+			<xiApiPar>width:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="heightReg">
+			<xiApiPar>height</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="heightMinReg">
+			<xiApiPar>height:min</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="heightMaxReg">
+			<xiApiPar>height:max</xiApiPar>
+			<pInvalidator>downsamplingReg</pInvalidator>
+			<pInvalidator>downsampling_typeReg</pInvalidator>
+			<pInvalidator>imgdataformatReg</pInvalidator>
+			<pInvalidator>offsetYReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="heightIncReg">
+			<xiApiPar>height:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="trigger_sourceReg">
+			<xiApiPar>trigger_source</xiApiPar>
+		</IntReg>
+		<IntReg Name="trigger_softwareReg">
+			<xiApiPar>trigger_software</xiApiPar>
+		</IntReg>
+		<IntReg Name="trigger_selectorReg">
+			<xiApiPar>trigger_selector</xiApiPar>
+		</IntReg>
+		<IntReg Name="acq_frame_burst_countReg">
+			<xiApiPar>acq_frame_burst_count</xiApiPar>
+		</IntReg>
+		<IntReg Name="acq_frame_burst_countMinReg">
+			<xiApiPar>acq_frame_burst_count:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="acq_frame_burst_countMaxReg">
+			<xiApiPar>acq_frame_burst_count:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="acq_frame_burst_countIncReg">
+			<xiApiPar>acq_frame_burst_count:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="gpi_selectorReg">
+			<xiApiPar>gpi_selector</xiApiPar>
+		</IntReg>
+		<IntReg Name="gpi_modeReg">
+			<xiApiPar>gpi_mode</xiApiPar>
+			<pInvalidator>gpi_selectorReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="gpi_levelReg">
+			<xiApiPar>gpi_level</xiApiPar>
+			<pInvalidator>gpi_selectorReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="gpo_selectorReg">
+			<xiApiPar>gpo_selector</xiApiPar>
+		</IntReg>
+		<IntReg Name="gpo_modeReg">
+			<xiApiPar>gpo_mode</xiApiPar>
+			<pInvalidator>gpo_selectorReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="led_selectorReg">
+			<xiApiPar>led_selector</xiApiPar>
+		</IntReg>
+		<IntReg Name="led_modeReg">
+			<xiApiPar>led_mode</xiApiPar>
+			<pInvalidator>led_selectorReg</pInvalidator>
+		</IntReg>
+		<BooleanReg Name="dbnc_enReg">
+			<xiApiPar>dbnc_en</xiApiPar>
+			<pInvalidator>gpi_selectorReg</pInvalidator>
+		</BooleanReg>
+		<IntReg Name="dbnc_t0Reg">
+			<xiApiPar>dbnc_t0</xiApiPar>
+			<pInvalidator>gpi_selectorReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="dbnc_t0MinReg">
+			<xiApiPar>dbnc_t0:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="dbnc_t0MaxReg">
+			<xiApiPar>dbnc_t0:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="dbnc_t0IncReg">
+			<xiApiPar>dbnc_t0:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="dbnc_t1Reg">
+			<xiApiPar>dbnc_t1</xiApiPar>
+			<pInvalidator>gpi_selectorReg</pInvalidator>
+		</IntReg>
+		<IntReg Name="dbnc_t1MinReg">
+			<xiApiPar>dbnc_t1:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="dbnc_t1MaxReg">
+			<xiApiPar>dbnc_t1:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="dbnc_t1IncReg">
+			<xiApiPar>dbnc_t1:inc</xiApiPar>
+		</IntReg>
+		<BooleanReg Name="dbnc_polReg">
+			<xiApiPar>dbnc_pol</xiApiPar>
+			<pInvalidator>gpi_selectorReg</pInvalidator>
+		</BooleanReg>
+		<BooleanReg Name="lens_modeReg">
+			<xiApiPar>lens_mode</xiApiPar>
+		</BooleanReg>
+		<FloatReg Name="LensApertureValueMaxReg">
+			<xiApiPar>lens_aperture_value:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="LensApertureValueMinReg">
+			<xiApiPar>lens_aperture_value:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="LensApertureValueReg">
+			<xiApiPar>lens_aperture_value</xiApiPar>
+		</FloatReg>
+		<IntReg Name="LensFocusMovementValueMaxReg">
+			<xiApiPar>lens_focus_movement_value:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="LensFocusMovementValueMinReg">
+			<xiApiPar>lens_focus_movement_value:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="LensFocusMovementValueReg">
+			<xiApiPar>lens_focus_movement_value</xiApiPar>
+		</IntReg>
+		<IntReg Name="LensFocusMoveReg">
+			<xiApiPar>lens_focus_move</xiApiPar>
+		</IntReg>
+		<FloatReg Name="LensFocusDistanceMaxReg">
+			<xiApiPar>lens_focus_distance:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="LensFocusDistanceMinReg">
+			<xiApiPar>lens_focus_distance:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="LensFocusDistanceReg">
+			<xiApiPar>lens_focus_distance</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="LensFocalLengthMaxReg">
+			<xiApiPar>lens_focal_length:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="LensFocalLengthMinReg">
+			<xiApiPar>lens_focal_length:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="LensFocalLengthReg">
+			<xiApiPar>lens_focal_length</xiApiPar>
+		</FloatReg>
+		<IntReg Name="LensFeatureSelectorReg">
+			<xiApiPar>lens_feature_selector</xiApiPar>
+		</IntReg>
+		<FloatReg Name="LensFeatureMaxReg">
+			<xiApiPar>lens_feature:max</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="LensFeatureMinReg">
+			<xiApiPar>lens_feature:min</xiApiPar>
+		</FloatReg>
+		<FloatReg Name="LensFeatureReg">
+			<xiApiPar>lens_feature</xiApiPar>
+			<pInvalidator>LensFeatureSelectorReg</pInvalidator>
+		</FloatReg>
+		<BooleanReg Name="hdrReg">
+			<xiApiPar>hdr</xiApiPar>
+		</BooleanReg>
+		<IntReg Name="hdr_kneepoint_countReg">
+			<xiApiPar>hdr_kneepoint_count</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint_countMinReg">
+			<xiApiPar>hdr_kneepoint_count:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint_countMaxReg">
+			<xiApiPar>hdr_kneepoint_count:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint_countIncReg">
+			<xiApiPar>hdr_kneepoint_count:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_t1Reg">
+			<xiApiPar>hdr_t1</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_t1MinReg">
+			<xiApiPar>hdr_t1:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_t1MaxReg">
+			<xiApiPar>hdr_t1:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_t1IncReg">
+			<xiApiPar>hdr_t1:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_t2Reg">
+			<xiApiPar>hdr_t2</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_t2MinReg">
+			<xiApiPar>hdr_t2:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_t2MaxReg">
+			<xiApiPar>hdr_t2:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_t2IncReg">
+			<xiApiPar>hdr_t2:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint1Reg">
+			<xiApiPar>hdr_kneepoint1</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint1MinReg">
+			<xiApiPar>hdr_kneepoint1:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint1MaxReg">
+			<xiApiPar>hdr_kneepoint1:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint1IncReg">
+			<xiApiPar>hdr_kneepoint1:inc</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint2Reg">
+			<xiApiPar>hdr_kneepoint2</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint2MinReg">
+			<xiApiPar>hdr_kneepoint2:min</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint2MaxReg">
+			<xiApiPar>hdr_kneepoint2:max</xiApiPar>
+		</IntReg>
+		<IntReg Name="hdr_kneepoint2IncReg">
+			<xiApiPar>hdr_kneepoint2:inc</xiApiPar>
+		</IntReg>
+	</Group>
+</RegisterDescription>

@@ -1,0 +1,138 @@
+---------------------------------------------
+This is XIMEA API Software Package for Linux.
+---------------------------------------------
+
+1. Installation
+
+Start ./install from shell. It will use sudo to obtain super user privileges, so
+you will probably need to enter user password. Alternatively you can run it while
+logged in as root.
+
+$ ./install
+
+1a. Installation of USB3 camera (e.g. MQ family)
+
+To enable installation of USB30 support you need to start installation
+script with option -cam_usb30
+
+$ ./install -cam_usb30
+
+2. Architecture
+
+The camera interface has layered architecture. The topmost is the application
+layer, that calls functions of xiAPI (e.g. xiGetImage). All examples are stored
+in directory /opt/XIMEA/examples. Header files (*.h) are located in
+/opt/XIMEA/include.
+
+API layer consist of compiled library libm3api.so, GenTL provider libXIMEA_GenTL.so
+and two additional dependencies (libusb and libraw1394). libm3api is installed to
+/usr/lib during the installation process to be available for all applications,
+libXIMEA_GenTL.so is located in /opt/XIMEA/lib/.
+
+Kernel driver layer is reprented by several kernel modules. Depending on camera type
+system use:
+- currera_acq.ko for all XIMEA - CURRERA cameras (it's located in /opt/XIMEA/modules/
+  directory and is loaded by /etc/init.d/currera_init script);
+- ehci-hcd.ko and xhci-hcd.ko for all XIMEA - USB cameras (e.g. MU9P);
+- firewire_ohci.ko (old ohci1394.ko is unsupported) for all XIMEA - Firewire cameras
+  (e.g. MR16000).
+The driver receives data from sensor and sends it to the API.
+
+------------------------------------------------------------------------------
+|           |           Application [example: xiSample]                      |
+|           ------------------------------------------------------------------
+| Userspace |              API (xiAPI) [libm3api.so]                         |
+|           |                  -----------------------------------------------
+|           |                  |    libraw1394    |          libusb          |
+------------------------------------------------------------------------------
+|  Kernel   |  currera_acq.ko  | firewire_ohci.ko | ehci-hcd.ko, xhci-hcd.ko |
+------------------------------------------------------------------------------
+| Hardware  | CURRERA-R sensor | Firewire Camera  |        USB camera        |
+------------------------------------------------------------------------------
+
+
+3. Example applications
+
+
+3a. xiSample
+
+This sample start acquisition from sensor. Then captures 10 frames and finishes.
+To compile - run command make from shell:
+
+$ make
+
+
+3b. vaViewer
+
+vaViewer is a small application for displaying frames captured by camera sensor.
+It requires VAAPI for video output. To build - run make from shell:
+
+$ make
+
+
+4. Notes
+
+
+4a. Access to devices
+
+This package installs udev rules that allow access to XIMEA cameras by any user in
+plugdev group. Almost all current Linux distributions run udev daemon, so this should
+work universally. You need to replug all cameras (or reboot the computer) after API
+package installation for rules to apply to them.
+
+To check if current user is in plugdev group (empty output means fail):
+
+$ id|grep plugdev
+
+To add current user to plugdev group (relogin is needed for changes to take effect):
+
+$ sudo gpasswd -a $USER plugdev
+
+To create plugdev group if it doesn't exist:
+
+$ sudo groupadd plugdev
+
+
+4b. Supplied libraries
+
+This package includes two 3rd-party libraries with necessary patches applied to them.
+You can review patches in libs directory. Installation script copies these libraries
+in /lib directory and tries to make sure that they are used in linking (see file
+/etc/ld.so.conf.d/000XIMEA.conf)
+
+libraw1394 is needed for Firewire camera support, usage of unpatched version will result
+in segmentation fault when trying to start acquisition.
+
+libusb is required for USB camera support. Minimum version with which USB2 cameras work
+reliably is 1.0.9. Patch is needed for USB3 support.
+
+
+4c. USB3 support
+
+XHCI kernel driver have some issues which can result in fails. Due to this fact
+it's highly recommended to plug USB2 cameras into USB2 host if possible. USB3
+cameras only work plugged into USB3 host, so if you experience problems with
+starting acquisition, you can try the following:
+- Replug the camera
+- Reload XHCI driver
+  $ sudo rmmod xhci-hcd ; sudo modprove xhci-hcd
+- Replug XHCI controller if it's hotpluggable (expresscard for example) or
+  reboot the computer
+- Upgrade Linux kernel to the latest version (see http://www.kernel.org/)
+- Check that supplied libusb.so is used (reinstall the package and check that
+  "ldd path/to/program" command lists /lib/libusb-1.0.so.0)
+
+
+4d. Kernel upgrade on Currera
+
+If required, you can upgrade Linux kernel on Currera system. After you have booted
+into new kernel, you will notice, that Currera's sensor isn't detected anymore by API
+library. To fix this you have to rebuild the currera_acq kernel module:
+
+$ cd /opt/XIMEA/src
+$ make
+$ sudo mv currera_acq.ko /opt/XIMEA/modules/
+$ sudo /etc/init.d/currera_init start
+
+--------------------------
+Read more at: http://www.ximea.com/support/wiki/apis/XIMEA_Linux_Software_Package
