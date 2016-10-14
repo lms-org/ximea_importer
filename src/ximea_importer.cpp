@@ -21,7 +21,7 @@ bool XimeaImporter::initialize() {
     HandleResult(stat,"xiOpenDevice");
 
     // Setting "exposure" parameter (10ms=10000us)
-    stat = xiSetParamInt(xiH, XI_PRM_EXPOSURE, 10000);
+    stat = xiSetParamInt(xiH, XI_PRM_EXPOSURE, config().get<int>("exposure",10000));
     HandleResult(stat,"xiSetParam (exposure set)");
     stat = xiSetParamInt(xiH,XI_PRM_IMAGE_DATA_FORMAT,XI_MONO8);
     HandleResult(stat,"xiSetParam (XI_PRM_IMAGE_DATA_FORMAT set)");
