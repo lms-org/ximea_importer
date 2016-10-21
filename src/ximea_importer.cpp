@@ -1,7 +1,7 @@
 #include "ximea_importer.h"
 
 
-#define HandleResult(res,place) if (res!=XI_OK) {printf("Error after %s (%d)",place,res);}
+#define HandleResult(res,place) if (res!=XI_OK) {logger.error("Error after: ")<<place<<" "<<res;}
 
 
 //TODO https://www.ximea.com/support/wiki/apis/XiApi_Manual
@@ -16,10 +16,13 @@ bool XimeaImporter::initialize() {
     XI_RETURN stat = XI_OK;
 
     // Retrieving a handle to the camera device
-    printf("Opening first camera...\n");
+    logger.debug("Opening camera");
     stat = xiOpenDevice(0, &xiH);
+    logger.debug("Opening camera 1");
     HandleResult(stat,"xiOpenDevice");
+    logger.debug("Opening camera 2");
 
+    logger.debug("Setting parameters");
     // Setting "exposure" parameter (10ms=10000us)
     stat = xiSetParamInt(xiH, XI_PRM_EXPOSURE, config().get<int>("exposure",10000));
     HandleResult(stat,"xiSetParam (exposure set)");
@@ -29,15 +32,14 @@ bool XimeaImporter::initialize() {
     HandleResult(stat,"xiSetParam (XI_PRM_AUTO_WB set)");
     stat = xiSetParamInt(xiH,XI_PRM_FRAMERATE,100);
     HandleResult(stat,"xiSetParam (XI_PRM_FRAMERATE set)");
-
-    printf("Starting acquisition...\n");
+    logger.debug("Starting acquisition...");
     stat = xiStartAcquisition(xiH);
     HandleResult(stat,"xiStartAcquisition");
     return true;
 }
 
 bool XimeaImporter::deinitialize() {
-    printf("Stopping acquisition...\n");
+    logger.debug("Stopping acquisition...\n");
     xiStopAcquisition(xiH);
     xiCloseDevice(xiH);
     return true;
