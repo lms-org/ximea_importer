@@ -18,6 +18,7 @@ public:
     bool initialize() override;
     bool deinitialize() override;
     bool cycle() override;
+    void configsChanged() override;
 
 private:
     lms::WriteDataChannel<lms::imaging::Image> myImage;

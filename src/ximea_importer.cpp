@@ -23,19 +23,25 @@ bool XimeaImporter::initialize() {
     logger.debug("Opening camera 2");
 
     logger.debug("Setting parameters");
-    // Setting "exposure" parameter (10ms=10000us)
-    stat = xiSetParamInt(xiH, XI_PRM_EXPOSURE, config().get<int>("exposure",10000));
-    HandleResult(stat,"xiSetParam (exposure set)");
-    stat = xiSetParamInt(xiH,XI_PRM_IMAGE_DATA_FORMAT,XI_MONO8);
-    HandleResult(stat,"xiSetParam (XI_PRM_IMAGE_DATA_FORMAT set)");
-    stat = xiSetParamInt(xiH,XI_PRM_AUTO_WB,1);
-    HandleResult(stat,"xiSetParam (XI_PRM_AUTO_WB set)");
-    stat = xiSetParamInt(xiH,XI_PRM_FRAMERATE,100);
-    HandleResult(stat,"xiSetParam (XI_PRM_FRAMERATE set)");
+    configsChanged();
     logger.debug("Starting acquisition...");
     stat = xiStartAcquisition(xiH);
     HandleResult(stat,"xiStartAcquisition");
     return true;
+}
+
+void XimeaImporter::configsChanged(){
+    // Setting "exposure" parameter (10ms=10000us)
+    stat = xiSetParamInt(xiH, XI_PRM_EXPOSURE, config().get<int>("exposure",10000));
+    HandleResult(stat,"xiSetParam (exposure set)");
+    stat = xiSetParamInt(xiH,XI_PRM_GAIN,config().get<int>("gain",2));
+    HandleResult(stat,"xiSetParam (XI_PRM_GAIN set)");
+    stat = xiSetParamInt(xiH,XI_PRM_IMAGE_DATA_FORMAT,XI_MONO8);
+    HandleResult(stat,"xiSetParam (XI_PRM_IMAGE_DATA_FORMAT set)");
+    stat = xiSetParamInt(xiH,XI_PRM_AUTO_WB,1);
+    HandleResult(stat,"xiSetParam (XI_PRM_AUTO_WB set)");
+    stat = xiSetParamInt(xiH,XI_PRM_FRAMERATE,config().get<int>("fps",100));
+    HandleResult(stat,"xiSetParam (XI_PRM_FRAMERATE set)");
 }
 
 bool XimeaImporter::deinitialize() {
