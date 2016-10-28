@@ -21,9 +21,25 @@ endif()
 
 include_directories(include)
 add_library(ximea_importer MODULE ${SOURCES} ${HEADERS})
+
+if(APPLE)
+find_library(M3API m3api)
+endif(APPLE)
+
 if(USE_CONAN)
+
+if(APPLE)
+target_link_libraries(ximea_importer PRIVATE ${CONAN_LIBS} ${M3API})
+else()
 target_link_libraries(ximea_importer PRIVATE ${CONAN_LIBS} m3api)
+endif(APPLE)
+
+else()
+
+if(APPLE)
+target_link_libraries(ximea_importer PRIVATE lmscore lms_imaging ${M3API})
 else()
 target_link_libraries(ximea_importer PRIVATE lmscore lms_imaging m3api)
+endif(APPLE)
 
 endif(USE_CONAN)
