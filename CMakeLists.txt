@@ -24,6 +24,6 @@ add_library(ximea_importer MODULE ${SOURCES} ${HEADERS})
 if(USE_CONAN)
 target_link_libraries(ximea_importer PRIVATE ${CONAN_LIBS} m3api)
 else()
-target_link_libraries(ximea_importer PRIVATE lms_imaging m3api)
+target_link_libraries(ximea_importer PRIVATE lmscore lms_imaging m3api)
 
 endif(USE_CONAN)
