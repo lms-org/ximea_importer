@@ -55,6 +55,10 @@ bool XimeaImporter::cycle() {
     // getting image from camera
     stat = xiGetImage(xiH, 5000, &image);
     HandleResult(stat,"xiGetImage");
+    if(stat!= XI_OK){
+        logger.error("failed to collect image");
+        return false;
+    }
 
     myImage->resize(image.width,image.height,lms::imaging::Format::GREY);
     myImage->fill(255);
