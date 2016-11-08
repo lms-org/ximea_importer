@@ -27,7 +27,7 @@ bool XimeaImporter::initialize() {
     logger.debug("Starting acquisition...");
     stat = xiStartAcquisition(xiH);
     HandleResult(stat,"xiStartAcquisition");
-    return true;
+    return stat==XI_OK;
 }
 
 void XimeaImporter::configsChanged(){
