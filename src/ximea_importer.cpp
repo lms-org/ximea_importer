@@ -3,7 +3,38 @@
 
 #define HandleResult(res,place) if (res!=XI_OK) {logger.error("Error after: ")<<place<<" "<<res;}
 
+//#include <usb.h>
+//#include <unistd.h>
 
+bool is_XIMEAcam(uint16_t idVendor, uint16_t idProduct) {
+    if(idVendor == 0x04B4 && (idProduct == 0x00F0 || idProduct == 0x00F1 || idProduct == 0x00F2 || idProduct == 0x00F3 || idProduct == 0x8613)
+            || idVendor == 0x20F7 && (idProduct == 0x3000 || idProduct == 0x3001 || idProduct == 0xA003)
+            || idVendor == 0xDEDA && idProduct == 0xA003)
+        return true;
+    else
+        return false;
+}
+
+void try2reset() {
+    /*TODO
+    libusb_context *ctx;
+    if(libusb_init(&ctx)) return;
+    libusb_device **list;
+    libusb_device_handle *handle;
+    libusb_device_descriptor desc;
+    ssize_t i, cnt = libusb_get_device_list(ctx, &list);
+    for(i = 0; i < cnt; i++) {
+        if(libusb_get_device_descriptor(list[i], &desc)) continue;
+        if(!is_XIMEAcam(desc.idVendor, desc.idProduct)) continue;
+        if(libusb_open(list[i], &handle)) continue;
+        libusb_reset_device(handle);
+        libusb_close(handle);
+    }
+    if(cnt >= 0)
+        libusb_free_device_list(list, 1);
+    libusb_exit(ctx);
+    */
+}
 //TODO https://www.ximea.com/support/wiki/apis/XiApi_Manual
 //Taken from the xiExample
 bool XimeaImporter::initialize() {
@@ -12,6 +43,8 @@ bool XimeaImporter::initialize() {
     memset(&image,0,sizeof(image));
     image.size = sizeof(XI_IMG);
 
+    //try to reset, from https://www.ximea.com/support/wiki/apis/Linux_SP_Knowledge_Base
+    try2reset();
     // Sample for XIMEA API V4.05
     XI_RETURN stat = XI_OK;
 
@@ -59,6 +92,7 @@ bool XimeaImporter::cycle() {
     HandleResult(stat,"xiGetImage");
     if(stat!= XI_OK){
         logger.error("failed to collect image")<<"trying to reconnect!";
+        try2reset();
         deinitialize();
         initialize();
         return false;
