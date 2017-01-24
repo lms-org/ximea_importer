@@ -58,7 +58,9 @@ bool XimeaImporter::cycle() {
     stat = xiGetImage(xiH, 5000, &image);
     HandleResult(stat,"xiGetImage");
     if(stat!= XI_OK){
-        logger.error("failed to collect image");
+        logger.error("failed to collect image")<<"trying to reconnect!";
+        deinitialize();
+        initialize();
         return false;
     }
 
