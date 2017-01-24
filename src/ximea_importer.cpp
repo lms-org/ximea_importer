@@ -18,8 +18,10 @@ bool XimeaImporter::initialize() {
     // Retrieving a handle to the camera device
     logger.debug("Opening camera");
     stat = xiOpenDevice(0, &xiH);
-    logger.debug("Opening camera 1");
     HandleResult(stat,"xiOpenDevice");
+    if(stat != XI_OK){
+        return false;
+    }
     logger.debug("Opening camera 2");
 
     logger.debug("Setting parameters");
